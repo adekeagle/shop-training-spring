@@ -11,7 +11,7 @@ public class FakePaymentService {
 
     public static final String LOG_FORMAT = "A new payment of %s has been initiated";
 
-    private final UUIDPaymentIdGenerator paymentIdGenerator;
+    private final PaymentIdGenerator paymentIdGenerator;
 
     public Payment process(PaymentRequest paymentRequest){
         var payment = Payment.builder()

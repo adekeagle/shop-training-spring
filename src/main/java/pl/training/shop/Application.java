@@ -6,7 +6,7 @@ import pl.training.shop.payments.*;
 @Log
 public class Application {
     public static void main(String[] args) {
-        var paymentIdGenerator = new UUIDPaymentIdGenerator();
+        var paymentIdGenerator = new IncrementalPaymentIdGenerator();
         var paymentService = new FakePaymentService(paymentIdGenerator);
         var paymentRequest = PaymentRequest.builder()
                 .money(LocalMoney.of(1_0000))
